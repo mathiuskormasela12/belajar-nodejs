@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"name": "Abid",
+		"nis": "17263",
+		"img": "abid.JPG"
+	},
+	{
+		"id": 2,
+		"name": "Adi Pratama",
+		"nis": "12213",
+		"img": "adi.JPG"
+	},
+	{
+		"id": 3,
+		"name": "Resmi Aji",
+		"nis": "11113",
+		"img": "aji.JPG"
+	},
+	{
+		"id": 4,
+		"name": "Akbar Habibie",
+		"nis": "22263",
+		"img": "akbar.JPG"
+	},
+	{
+		"id": 5,
+		"name": "Akshin Prasetyo",
+		"nis": "23263",
+		"img": "akshin.JPG"
+	},
+	{
+		"id": 6,
+		"name": "Ammar Abdullah",
+		"nis": "11200",
+		"img": "ammar.JPG"
+	},
+	{
+		"id": 7,
+		"name": "Ariefin Nugroho",
+		"nis": "57261",
+		"img": "arifin.JPG"
+	},
+	{
+		"id": 8,
+		"name": "Avrylianah Dewy",
+		"nis": "90260",
+		"img": "avryl.JPG"
+	},
+	{
+		"id": 9,
+		"name": "Bayu Aji",
+		"nis": "12211",
+		"img": "bayu.JPG"
+	}
+]

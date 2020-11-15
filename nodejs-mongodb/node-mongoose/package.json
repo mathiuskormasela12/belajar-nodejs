@@ -1,0 +1,21 @@
+{
+  "name": "belajar-nodejs-mongoose",
+  "version": "1.0.0",
+  "description": "Belajar Express Js dan Mongoose",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Mongodb",
+    "Mongoose"
+  ],
+  "author": "Mathius",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11"
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Aplikasi CRUD</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+	</head>
+	<body>
+		
+		<section>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<div class="container">
+				  <a class="navbar-brand" href="#">SMKN 12 Jakarta</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mr-auto">
+				      <li class="nav-item active">
+				        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link add-data" href="#" data-toggle="modal" data-target="#addUpdateDataModal">Add Siswa</a>
+				      </li>
+				    </ul>
+				    <form class="form-inline my-2 my-lg-0" method="post" action="/search">
+				      <input class="form-control mr-sm-2" type="search" placeholder="Search" name="keyword" aria-label="Search">
+				      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				    </form>
+				  </div>
+				</div>
+			</nav>
+
+			<div class="div">
+				<div class="container">
+					<div class="row text-left mt-4">
+						<div class="col-md">
+							<h2>Data Siswa RPL SMKN 12</h2>
+						</div>
+					</div>
+					
+					{{#if condAddData}}
+					<div class="row">
+						<div class="col-md-7">
+							<div class="alert alert-{{ typeAddData }} alert-dismissible fade show" role="alert">
+							  {{ msgAddData }}
+							  <button type="button" class="close" onclick="window.location = '/'" data-dismiss="alert" aria-label="Close">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+						</div>
+					</div>
+					{{/if}}
+
+					<div class="row mt-3">
+						{{#if data}}
+						{{#each data}}
+						<div class="col-md-3 mb-2">
+							<div class="card">
+							  <img src="/img/{{ foto }}" class="card-img-top" alt="Fotonya {{ nama }}">
+							  <div class="card-body">
+							    <h5 class="card-title">{{ nama }}</h5>
+							    <p class="card-text text-muted">{{ nisn }}</p>
+							    <a href="#" class="btn btn-primary update-data" data-id="{{ id }}" data-toggle="modal" data-target="#addUpdateDataModal">Update</a>
+							    <a href="/delete/{{ id }}" class="btn btn-danger">Delete</a>
+							  </div>
+							</div>
+						</div>
+						{{/each}}
+						{{else if condSearch}} 
+						<h1>{{ msg }}</h1>
+						{{else}}
+						<div class="col-md">
+							<h1>{{ msg }}</h1>
+						</div>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Modal -->
+		<div class="modal fade" id="addUpdateDataModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Tambah Siswa</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <form action="/add" method="post" id="method">
+			      <div class="modal-body">
+			        <div class="container">
+			        	<div class="form-group">
+							    <label for="exampleInputEmail1">Nama Siswa</label>
+							    <input type="text" class="form-control" name="namaSiswa" id="namaSiswa">
+							    <div class="invalid-feedback">
+						        Nama harus diisi
+						      </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="nisn">NISN</label>
+							    <input type="hidden" name="id" id="id">
+							    <input type="number" class="form-control" id="nisn" name="nisn">
+							    <div class="invalid-feedback">
+						        Panjang NISN itu 5 digit
+						      </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="fotoSiswa">Foto</label>
+							    <input type="text" class="form-control" name="fotoSiswa" id="fotoSiswa">
+							    <div class="invalid-feedback">
+						        Foto harus di isi
+						      </div>
+							  </div>
+			        </div>
+			      </div> 
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button type="submit" class="btn btn-primary save" disabled>Save changes</button>
+			      </div>
+			    </form>
+		    </div>
+		  </div>
+		</div>
+		
+		<script src="/js/main.js"></script>
+		<script src="/js/jquery-3.5.1.slim.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>

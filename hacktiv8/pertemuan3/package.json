@@ -1,0 +1,19 @@
+{
+  "name": "pertemuan3",
+  "version": "1.0.0",
+  "description": "Belajar Routes Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js"
+  },
+  "keywords": [
+    "Node Js",
+    "Express"
+  ],
+  "author": "Matthew Kormasela",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

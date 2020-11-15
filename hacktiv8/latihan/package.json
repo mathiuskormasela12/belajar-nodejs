@@ -1,0 +1,22 @@
+{
+  "name": "latihan",
+  "version": "1.0.0",
+  "description": "Latihan Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "body-parser"
+  ],
+  "author": "Mathius Kormasela",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  }
+}

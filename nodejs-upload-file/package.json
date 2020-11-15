@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-upload-file",
+  "version": "1.0.0",
+  "description": "Belajar Upload File",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Expressjs",
+    "express-fileupload"
+  ],
+  "author": "Mathius Kormasela",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "hbs": "^4.1.1"
+  }
+}

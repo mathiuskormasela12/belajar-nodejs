@@ -1,0 +1,19 @@
+{
+  "name": "belajar-modules",
+  "version": "1.0.0",
+  "description": "Belajar Node Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "file": "node index.js"
+  },
+  "keywords": [
+    "Node",
+    "Js"
+  ],
+  "author": "mathius",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.27.0"
+  }
+}

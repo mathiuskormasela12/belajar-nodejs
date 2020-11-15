@@ -1,0 +1,24 @@
+h1 {
+	margin-bottom: 50px;
+}
+
+ul {
+	list-style: none;
+	line-height: 39px;
+}
+
+.danger {
+	background-color: black;
+	color: red;
+}
+
+.warning {
+	background-color: blue;
+	color: yellow;
+}
+
+.success {
+	background-color: black;
+	color: limegreen;
+}
+

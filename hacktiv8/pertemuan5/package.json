@@ -1,0 +1,23 @@
+{
+  "name": "hacktivcash",
+  "version": "1.0.0",
+  "description": "Belajar Membuat Aplikasi Dengan Express & Handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Js",
+    "Handlebars"
+  ],
+  "author": "Mathius Kormasela",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  }
+}

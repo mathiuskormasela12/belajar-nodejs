@@ -1,0 +1,24 @@
+{
+  "name": "todo-app-rest-api",
+  "version": "1.0.0",
+  "description": "Node.JS Project with Express MySQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql",
+    "sequelize",
+    "cors"
+  ],
+  "author": "Mathius Kormasela",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.3"
+  }
+}

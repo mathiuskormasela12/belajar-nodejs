@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/css/form.css">
+		<title>Edit Siswa</title>
+	</head>
+	<body>
+		<h1>Edit Siswa</h1>
+		<form action="/edit" method="POST" enctype="multipart/form-data">
+			<ul>
+				<li>
+					<label for="full_name">Nama Lengkap</label>
+				</li>
+				<li>
+					<input type="text" placeholder="tulis nama lengkap...." id="full_name" name="full_name" value="{{ results.full_name }}">
+					<input type="hidden" value="{{ results.id }}" name="id">
+					<input type="hidden" value="{{ results.foto }}" name="foto_lama">
+				</li>
+				<li>
+					<label for="nisn">NISN</label>
+				</li>
+				<li>
+				<input type="number" placeholder="tulis nisn...." id="nisn" name="nisn" value="{{ results.nisn}}">
+				</li>
+				<li>
+					<label for="kelas">Kelas</label>
+				</li>
+				<li>
+					<select id="kelas" name="kelas">
+						{{#if results.isX}}
+							<option value="X" selected>X</option>
+							<option value="XI">XI</option>
+							<option value="XII">XII</option>
+						{{else if results.isXI}}
+							<option value="X">X</option>
+							<option value="XI" selected>XI</option>
+							<option value="XII">XII</option>
+						{{else}}
+							<option value="X">X</option>
+							<option value="XI">XI</option>
+							<option value="XII" selected>XII</option>
+						{{/if}}
+					</select>
+				</li>
+				<li>
+					<label for="jurusan">Jurusan</label>
+				</li>
+				<li>
+					<select id="jurusan" name="jurusan">
+						{{#if results.isRPL}}
+							<option value="RPL" selected>RPL</option>
+							<option value="AKL">AKL</option>
+							<option value="OTKP">OTKP</option>
+						{{else if results.isAKL}}
+							<option value="RPL">RPL</option>
+							<option value="AKL" selected>AKL</option>
+							<option value="OTKP">OTKP</option>
+						{{else}}
+							<option value="RPL">RPL</option>
+							<option value="AKL">AKL</option>
+							<option value="OTKP" selected>OTKP</option>
+						{{/if}}
+					</select>
+				</li>
+				<li>
+					<label for="ttl">TTL</label>
+				</li>
+				<li>
+					<input type="date" id="ttl" name="ttl" value="{{ results.ttl}}">
+				</li>
+				<li>
+					<label for="foto">Foto</label>
+				</li>
+				<li>
+					<input type="file" id="foto" name="foto">
+				</li>
+				<li>
+					<button type="submit">Tambah Siswa</button>
+				</li>
+			</ul>
+		</form>
+		{{#if message}}
+			<p class="{{ type }}">{{ message }}</p>
+		{{/if}}
+	</body>
+</html>
